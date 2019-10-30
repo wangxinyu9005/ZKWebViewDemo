@@ -20,3 +20,4 @@ implementation 'com.github.wangxinyu9005:ZKWebViewDemo:V1.0'
 
 ### Step 3. Add `android:usesCleartextTraffic="true"` in <Application> of AndroidManifest.xml
 
+### Step 4. the version of tools.build:gradle should be below 3.5.0 !!! (build.gradle in project)
