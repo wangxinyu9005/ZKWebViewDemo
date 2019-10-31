@@ -3,8 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/load_url"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:text="加载URL"
+        android:onClick="loadUrl"
+        android:layout_height="wrap_content" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mRecyclerView"
+        android:layout_below="@+id/load_url"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

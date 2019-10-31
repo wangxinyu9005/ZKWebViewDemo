@@ -168,4 +168,12 @@ public class FileListActivity extends AppCompatActivity {
             }
         }
     }
+
+    /**
+     * 加载url
+     * @param view
+     */
+    public void loadUrl(View view) {
+        startActivity(new Intent(this, LoadUrlActivity.class));
+    }
 }
