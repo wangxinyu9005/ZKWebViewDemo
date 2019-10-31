@@ -15,7 +15,7 @@ Android基于腾讯X5内核的WebView，解决移动端webview使用过程中出
 
 ### Step 2. Add the dependency in app gradle
 ```
-implementation 'com.github.wangxinyu9005:ZKWebViewDemo:V1.0'
+implementation 'com.github.wangxinyu9005:ZKWebViewDemo:0.3'
 ```
 
 ### Step 3. Add `android:usesCleartextTraffic="true"` in <Application> of AndroidManifest.xml
