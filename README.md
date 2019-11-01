@@ -26,10 +26,14 @@ Step 3 and step 4 are not required if the phone is equipped with WeChat and QQ.
 When WeChat and QQ is not installed on the phone, TBS will download the X5 kernel into the phone, and steps 3 and 4 are to solve the problem of networking.
 
 如果手机有微信和QQ，则不需要步骤3和步骤4。当手机没有安装微信和QQ时，TBS会将X5内核下载到手机上，步骤3和步骤4是为了解决联网问题。
-
+---
 if the phone is equipped with WeChat and QQ, The onViewInitFinished method returns true so that the SDK functions normally.
 
 如果手机安装了微信和QQ, onViewInitFinished方法返回true, SDK就能正常使用了。
+---
+The following methods are executed in Application
+
+以下方法在Application中执行
 ```
        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
 
