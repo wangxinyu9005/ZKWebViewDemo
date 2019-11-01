@@ -21,3 +21,40 @@ implementation 'com.github.wangxinyu9005:ZKWebViewDemo:0.3'
 ### Step 3. Add `android:usesCleartextTraffic="true"` in <Application> of AndroidManifest.xml
 
 ### Step 4. the version of tools.build:gradle should be below 3.5.0 !!! (build.gradle in project)
+
+Step 3 and step 4 are not required if the phone is equipped with WeChat and QQ.
+When WeChat and QQ is not installed on the phone, TBS will download the X5 kernel into the phone, and steps 3 and 4 are to solve the problem of networking.
+
+if the phone is equipped with WeChat and QQ, The onViewInitFinished method returns true so that the SDK functions normally.
+```
+       QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
+
+            @Override
+            public void onViewInitFinished(boolean arg0) {
+                // TODO Auto-generated method stub
+                //x5內核初始化完成的回调，为true表示x5内核加载成功，否则表示x5内核加载失败，会自动切换到系统内核。
+                Log.e("TestZKWebView", "TestZKWebView onViewInitFinished is " + arg0);
+            }
+
+            @Override
+            public void onCoreInitFinished() {
+                // TODO Auto-generated method stub
+            }
+        };
+
+        QbSdk.setTbsListener(new TbsListener() {
+            @Override
+            public void onDownloadFinish(int i) {
+            }
+
+            @Override
+            public void onInstallFinish(int i) {
+            }
+
+            @Override
+            public void onDownloadProgress(int i) {
+            }
+        });
+        //x5内核初始化接口
+        QbSdk.initX5Environment(getApplicationContext(), cb);
+```
