@@ -22,12 +22,10 @@ implementation 'com.github.wangxinyu9005:ZKWebViewDemo:0.3'
 
 ### Step 4. the version of tools.build:gradle should be below 3.5.0 !!! (build.gradle in project)
 
-<div>
 Step 3 and step 4 are not required if the phone is equipped with WeChat and QQ.
 When WeChat and QQ is not installed on the phone, TBS will download the X5 kernel into the phone, and steps 3 and 4 are to solve the problem of networking.
 
 如果手机有微信和QQ，则不需要步骤3和步骤4。当手机没有安装微信和QQ时，TBS会将X5内核下载到手机上，步骤3和步骤4是为了解决联网问题。
-</div>
 
 ---
 if the phone is equipped with WeChat and QQ, The onViewInitFinished method returns true so that the SDK functions normally.
